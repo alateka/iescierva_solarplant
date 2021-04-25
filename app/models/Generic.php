@@ -9,14 +9,12 @@ class Generic
         $this->db = MySQLdb::getInstance()->getDatabase();
     }
 
-    /* Ejemplo de consulta SQL con BIND PARAM.
-    private function existsEmail($email)
+    public function getAllData()
     {
-        $sql = 'SELECT * FROM users WHERE email=:email';
+        $sql = "SELECT * FROM `charts` ORDER BY id DESC";
         $query = $this->db->prepare($sql);
-        $query->bindParam(':email', $email, PDO::PARAM_STR);
         $query->execute();
-        return $query->rowCount();
-    }*/
+        return $query->fetchAll(PDO::FETCH_ASSOC);
+    }
 
 }

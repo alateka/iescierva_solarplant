@@ -2,13 +2,19 @@
 
 class HomeController extends Controller
 {
+    private $model;
+
+    public function __construct()
+    {
+        $this->model = $this->model('Generic');
+    }
+
     public function index()
     {
+        $dbData = $this->model->getAllData();
         $data = [
-            'titulo' => 'Gráficos Solares',
-            'total_consumption' => 542,
-            'net_consumption' => 321,
-            'auto_consumption' => 111
+            'titulo' => 'Planta Solar',
+            'db_data' => $dbData
         ];
         $this->view('home', $data);
     }
