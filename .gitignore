@@ -1,0 +1,7 @@
+.idea
+web/html/.env
+web/html/vendor
+DatosInversores
+.env
+web/html/composer.json
+web/html/composer.lock
