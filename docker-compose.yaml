@@ -1,0 +1,28 @@
+version: '3.1'
+
+services:
+  web_server-apache:
+    container_name: web_server-apache
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./web/:/var/www/
+      - ./apache2/:/etc/apache2
+  db:
+    image: postgres
+    #restart: always
+    ports:
+      - 5477:5432
+    environment:
+      POSTGRES_PASSWORD: "${db_password}"
+      POSTGRES_USER: "${db_user}"
+      POSTGRES_DB: generic
+  adminer:
+    image: adminer
+    #restart: always
+    ports:
+      - 8085:8080
