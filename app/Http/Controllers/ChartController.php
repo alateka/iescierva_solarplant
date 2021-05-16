@@ -32,7 +32,7 @@ class ChartController extends Controller
         return $decoded;
     }
 
-    public function insertDataDB()
+    public function insertDataDB() // TODO Desarrollar su correspondiente test
     {
         // $APIdata = loadData('inverter');
 
@@ -41,6 +41,7 @@ class ChartController extends Controller
         $dateToday = Carbon::now();
         $date = Carbon::createFromFormat('Y-m-d H:i:s', $dateToday->toDateTimeString())->format('d/m/Y H:i:s');
 
+        // TODO Poner en el campo date su correspondiente fecha obtenida desde la API.
         $chart = new Chart();
         $chart->consumo_red = '478';
         $chart->consumo_total = '47';
