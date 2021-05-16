@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'HomeController');
+Route::get('/add', 'ChartController@loadData');
+Route::get('/get', 'ChartController@getData');
+Route::get('/insert', 'ChartController@insertDataDB');
 
-Route::get('/', function () {
-    return view('home');
-});
