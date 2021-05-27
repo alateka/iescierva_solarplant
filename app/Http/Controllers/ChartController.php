@@ -34,8 +34,8 @@ class ChartController extends Controller
 
     public function insertDataDB() // TODO Desarrollar su correspondiente test
     {
-        // $APIdata = loadData('inverter');
-
+         $APIdata = $this->loadData('inverter');
+        print_r($APIdata);
         // Uso una libreria llamada Carbon para la manipulación de las fechas y horas que se visualizan en las vistas
         // Configuro el formato de presentación de las fechas
         $dateToday = Carbon::now();

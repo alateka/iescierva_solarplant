@@ -1,4 +1,7 @@
-@include('_header')
+@include('_head')
+<div id="app" class="content">
+    <header-component></header-component>
+</div>
 <body>
 <div id="solar_chart" style="height: 300px;"></div>
 <script>
