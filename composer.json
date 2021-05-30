@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "barryvdh/laravel-ide-helper": "^2.10",
         "consoletvs/charts": "^7.2",
         "facade/flare-client-php": "^1.8",
         "facade/ignition": "^2.9",

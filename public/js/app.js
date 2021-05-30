@@ -1864,7 +1864,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "HeaderComponent.vue"
 });
@@ -37441,7 +37440,8 @@ var staticRenderFns = [
               attrs: {
                 width: "50",
                 height: "50",
-                src: "img/empresario.jpg",
+                src:
+                  "https://cdn.icon-icons.com/icons2/2962/PNG/512/renewable_sun_eco_ecology_solar_energy_battery_icon_186031.png",
                 alt: "No esta"
               }
             }),
@@ -37449,7 +37449,7 @@ var staticRenderFns = [
             _c(
               "a",
               { staticClass: "navbar-brand text-white", attrs: { href: "#" } },
-              [_vm._v("PC Sangongo S.A")]
+              [_vm._v("IES Ingeniero de la Cierva")]
             ),
             _vm._v(" "),
             _c("div", { staticClass: "collapse navbar-collapse" }, [
@@ -37457,13 +37457,7 @@ var staticRenderFns = [
                 _c(
                   "a",
                   { staticClass: "nav-link text-white", attrs: { href: "#" } },
-                  [_vm._v("Características")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  { staticClass: "nav-link text-white", attrs: { href: "#" } },
-                  [_vm._v("Empresa")]
+                  [_vm._v("Inversores")]
                 )
               ])
             ]),

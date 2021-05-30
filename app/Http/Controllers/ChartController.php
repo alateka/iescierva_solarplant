@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Chart;
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ChartController extends Controller
 {
@@ -34,21 +32,17 @@ class ChartController extends Controller
 
     public function insertDataDB() // TODO Desarrollar su correspondiente test
     {
-         $APIdata = $this->loadData('inverter');
-        print_r($APIdata);
+        $APIdata = $this->loadData('inverter');
+
         // Uso una libreria llamada Carbon para la manipulación de las fechas y horas que se visualizan en las vistas
         // Configuro el formato de presentación de las fechas
         $dateToday = Carbon::now();
-        $date = Carbon::createFromFormat('Y-m-d H:i:s', $dateToday->toDateTimeString())->format('d/m/Y H:i:s');
 
-        // TODO Poner en el campo date su correspondiente fecha obtenida desde la API.
-        $chart = new Chart();
-        $chart->consumo_red = '478';
-        $chart->consumo_total = '47';
-        $chart->autoconsumo = '114';
-        $chart->date = $dateToday;
-        $chart->save();
-
-        return view("home", ['title' => 'Planta Solar IEScierva']);
+        DB::table('charts')->insert([
+            'consumo_red' => 789,
+            'consumo_total' => $APIdata[0]['Esum'],
+            'autoconsumo' => 477,
+            'date' => $dateToday->toDateTimeString()
+        ]);
     }
 }

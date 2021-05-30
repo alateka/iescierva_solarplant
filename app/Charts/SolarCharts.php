@@ -4,12 +4,11 @@ declare(strict_types = 1);
 
 namespace App\Charts;
 
-
 use App\Models\Chart;
 use Chartisan\PHP\Chartisan;
 use ConsoleTVs\Charts\BaseChart;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+
 
 class SolarCharts extends BaseChart
 {

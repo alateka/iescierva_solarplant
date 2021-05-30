@@ -25,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(Charts $charts)
     {
+        // TODO Decir que has hecho aquí.
         date_default_timezone_set('Europe/Madrid');
 
         $charts->register([

@@ -15,9 +15,9 @@ class ChartsDataTable extends Migration
     {
         Schema::create('charts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('consumo_red');
-            $table->string('consumo_total');
-            $table->string('autoconsumo');
+            $table->double('consumo_red');
+            $table->double('consumo_total');
+            $table->double('autoconsumo');
             $table->timestamp('date');
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('created_at')->nullable();
