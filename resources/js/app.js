@@ -20,6 +20,10 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('header-component', require('./components/HeaderComponent.vue').default);
+Vue.component('footer-component', require('./components/FooterComponent.vue').default);
+Vue.component('grid-component', require('./components/GRID.vue').default);
+Vue.component('load-component', require('./components/LOAD.vue').default);
+Vue.component('reno-component', require('./components/RENO.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

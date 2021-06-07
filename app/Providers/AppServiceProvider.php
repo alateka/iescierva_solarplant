@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Charts\SolarCharts;
 use ConsoleTVs\Charts\Registrar as Charts;
 use Illuminate\Support\ServiceProvider;
 
@@ -25,11 +24,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(Charts $charts)
     {
-        // TODO Decir que has hecho aquí.
+        // TODO Decir que has hecho aquí y explica que si no los registras, los gráficos directamente aparezen pero en blanco
         date_default_timezone_set('Europe/Madrid');
 
         $charts->register([
-            SolarCharts::class
+            \App\Charts\GridMeterChart::class,
+            \App\Charts\LoadMeterChart::class,
+            \App\Charts\RenoMeterChart::class,
         ]);
     }
 }
