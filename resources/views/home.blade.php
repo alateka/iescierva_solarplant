@@ -1,30 +1,16 @@
 @include('_head')
-<div id="app" class="content">
-    <header-component></header-component>
-</div>
 <body>
-<div id="solar_chart" style="height: 300px;"></div>
-<script>
-    const solarChart = new Chartisan({
-        el: '#solar_chart',
-        url: "@chart('solar_plant_charts')",
-        hooks: new ChartisanHooks()
-            .beginAtZero()
-            .colors(['#269f4c', '#81F781', '#41a6cf']),
-        options: {
-            legend: {
-                display: true,
-            },
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true,
-                        stepSize: 3.5
-                    },
-                }]
-            },
-        }
-    });
-</script>
+    <div id="app">
+        <header-component></header-component>
+        <div class="py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <grid-component></grid-component>
+                    <load-component></load-component>
+                    <reno-component></reno-component>
+                </div>
+            </div>
+        </div>
+        <footer-component></footer-component>
+    </div>
 </body>
-@include('_footer')

@@ -2,13 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Chart;
-use Illuminate\Http\Request;
+use App\Models\RenoMeter;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
     public function __invoke()
     {
-        return view("home", ['title' => 'Planta Solar IEScierva']);
+
+        $data = [
+            'title' => 'Planta Solar IEScierva',
+            'sumRST' => 547,
+        ];
+        return view("home", ['data' => $data]);
     }
 }

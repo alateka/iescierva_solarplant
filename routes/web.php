@@ -13,7 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', 'HomeController');
-Route::get('/add', 'ChartController@loadData');
-Route::get('/get', 'ChartController@getData');
-Route::get('/insert', 'ChartController@insertDataDB');
 
