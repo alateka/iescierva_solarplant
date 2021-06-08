@@ -15,14 +15,16 @@
 <script>
 export default {
     name: "GRID.vue",
+    // Se añade el método mounted para especificar que cuando el componemnte sea montado, se ejecutará el código de su interior.
     mounted() {
+        // Este código es el que llamará a la clase en la cual desarrollamos el gráfico correspondiente + sus datos.
         const grid_meter_chart = new Chartisan({
             el: '#grid_meter_chart',
             url: "/api/chart/grid_meter_chart",
             hooks: new ChartisanHooks()
                 .beginAtZero()
                 .colors(['#269f4c', '#81F781', '#41a6cf'])
-        });
+        }); // Al terminar esta función, se generará el gráfico sobre la vista/componente vue
     }
 }
 </script>
