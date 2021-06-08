@@ -27,9 +27,9 @@
         <div class="container d-flex justify-content-between">
         <a href="https://iescierva.net" class="navbar-brand d-flex align-items-center">
             <img style="height: 35px; margin-right: 7px" src="https://moodle.iescierva.net/pluginfile.php/1/theme_adaptable/favicon/1622388155/favicon.ico"
-                 lt="Logo IEScierva"><strong>IES Ingeniero de la Cierva</strong>
+                 alt="Logo IEScierva"><strong>IES Ingeniero de la Cierva</strong>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         </div>

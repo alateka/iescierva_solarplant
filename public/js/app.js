@@ -1857,6 +1857,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "FooterComponent.vue"
 });
@@ -2063,9 +2064,9 @@ Vue.component('grid-component', __webpack_require__(/*! ./components/GRID.vue */
 Vue.component('load-component', __webpack_require__(/*! ./components/LOAD.vue */ "./resources/js/components/LOAD.vue").default);
 Vue.component('reno-component', __webpack_require__(/*! ./components/RENO.vue */ "./resources/js/components/RENO.vue").default);
 /**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
+ *  Next, we will create a fresh Vue application instance and attach it to
+ *  the page. Then, you may begin adding components to this application
+ *  or customize the JavaScript scaffolding to fit your unique needs.
  */
 
 var app = new Vue({
@@ -37891,6 +37892,12 @@ var staticRenderFns = [
             _c("a", { attrs: { href: "https://www.iescierva.net/" } }, [
               _vm._v("Regresar a la web IES Ingeniero de la Cierva")
             ])
+          ]),
+          _vm._v(" "),
+          _c("h5", { staticClass: "text-black" }, [
+            _vm._v(
+              " 🌄 Estadisticas de la planta solar del centro educativo 😎"
+            )
           ])
         ])
       ])
@@ -38087,7 +38094,7 @@ var staticRenderFns = [
                 attrs: {
                   src:
                     "https://moodle.iescierva.net/pluginfile.php/1/theme_adaptable/favicon/1622388155/favicon.ico",
-                  lt: "Logo IEScierva"
+                  alt: "Logo IEScierva"
                 }
               }),
               _c("strong", [_vm._v("IES Ingeniero de la Cierva")])
