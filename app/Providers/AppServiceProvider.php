@@ -24,9 +24,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(Charts $charts)
     {
-        // TODO Decir que has hecho aquí y explica que si no los registras, los gráficos directamente aparezen pero en blanco
         date_default_timezone_set('Europe/Madrid');
 
+        // Si no registramos los gráficos, directamente no se mostrarán en las vistas.
         $charts->register([
             \App\Charts\GridMeterChart::class,
             \App\Charts\LoadMeterChart::class,

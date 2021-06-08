@@ -26,7 +26,7 @@ class RenoMeterChart extends BaseChart
         $R = $chartData->r_e;
         $S = $chartData->s_e;
         $T = $chartData->t_e;
-        $date = Carbon::createFromFormat('Y-m-d H:i',
+        $date = Carbon::createFromFormat('Y-m-d H:i', // Transformo la fecha obtenida desde la API.
             \Str::substr($chartData->date, 0, 16))->format('d/m/Y H:i');
 
         return Chartisan::build()

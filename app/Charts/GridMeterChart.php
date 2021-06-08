@@ -30,9 +30,10 @@ class GridMeterChart extends BaseChart
         /* Uso una libreria llamada Carbon para la manipulación de las fechas y horas que se visualizan en las vistas
          Configuro el formato de presentación de las fechas */
 
-        $date = Carbon::createFromFormat('Y-m-d H:i',
+        $date = Carbon::createFromFormat('Y-m-d H:i', // Transformo la fecha obtenida desde la API.
             \Str::substr($chartData->date, 0, 16))->format('d/m/Y H:i');
 
+        // La función devolverá el gráfico creado en formáto imagen pero con interaccíon por parte del usuario
         return Chartisan::build()
             ->labels(["$date - Total: $RST kWh"])
             ->dataset('Fase R', [(float)$R])
