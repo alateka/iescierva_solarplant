@@ -8,7 +8,7 @@ class HomeController extends Controller
     {
 
         $data = [
-            'title' => 'Planta Solar IEScierva',
+            'title' => '🌞 Planta Solar IEScierva',
         ];
         return view("home", ['data' => $data]);
     }
