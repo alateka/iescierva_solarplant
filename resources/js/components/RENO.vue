@@ -15,14 +15,16 @@
 <script>
 export default {
     name: "RENO.vue",
+        // Se añade el método mounted para especificar que cuando el componemnte sea montado, se ejecutará el código de su interior.
     mounted() {
+             // Este código es el que llamará a la clase php RenoMeterChart en la cual desarrollamos el gráfico correspondiente + sus datos.
         const reno_meter_chart = new Chartisan({
             el: '#reno_meter_chart',
             url: "/api/chart/reno_meter_chart",
             hooks: new ChartisanHooks()
                 .beginAtZero()
                 .colors(['#5c31d2', '#5978dc', '#e52d2d'])
-        });
+        }); // Al terminar esta función, se generará el gráfico sobre la vista/componente vue
     }
 }
 </script>

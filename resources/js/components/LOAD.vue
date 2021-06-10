@@ -15,14 +15,16 @@
 <script>
 export default {
     name: "LOAD.vue",
+      // Se añade el método mounted para especificar que cuando el componemnte sea montado, se ejecutará el código de su interior.
     mounted() {
+          // Este código es el que llamará a la clase php LoadMeterChart en la cual desarrollamos el gráfico correspondiente + sus datos.
         const load_meter_chart = new Chartisan({
             el: '#load_meter_chart',
             url: "/api/chart/load_meter_chart",
             hooks: new ChartisanHooks()
                 .beginAtZero()
                 .colors(['#cea31f', '#c945e7', '#64cd53'])
-        });
+        }); // Al terminar esta función, se generará el gráfico sobre la vista/componente vue
     }
 }
 </script>

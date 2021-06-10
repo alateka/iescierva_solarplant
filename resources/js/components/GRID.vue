@@ -17,7 +17,7 @@ export default {
     name: "GRID.vue",
     // Se añade el método mounted para especificar que cuando el componemnte sea montado, se ejecutará el código de su interior.
     mounted() {
-        // Este código es el que llamará a la clase en la cual desarrollamos el gráfico correspondiente + sus datos.
+        // Este código es el que llamará a la clase php GridMeterChart en la cual desarrollamos el gráfico correspondiente + sus datos.
         const grid_meter_chart = new Chartisan({
             el: '#grid_meter_chart',
             url: "/api/chart/grid_meter_chart",
